@@ -18,7 +18,7 @@ import Navbar from './Navbar';
 function Intro() {
   return (
     <section className="grid grid-cols-8 h-[700px]">
-      <div className="col-span-2 bg-black flex flex-col">
+      <div className="sm:col-span-3 lg:col-span-2 bg-black flex flex-col">
         <div className='w-full h-3/5 bg-no-repeat sm:bg-cover sm:bg-position-[center_0%] lg:bg-size-[130%] lg:bg-position-[center_40%] 2xl:lg:bg-size-[150%]' style={{ backgroundImage: `url(${ShakinImg})` }}></div>
         <div className='w-full text-white p-5'>
           <div>
@@ -96,7 +96,7 @@ function Intro() {
         </div>
       </div>
 
-      <div className="col-span-6 h-full flex flex-col">
+      <div className="sm:col-span-5 lg:col-span-6 h-full flex flex-col">
         <Navbar />
 
         <div className='flex flex-col justify-between flex-1'>

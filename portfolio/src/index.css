@@ -8,3 +8,19 @@
 body {
   font-family: 'Outfit', sans-serif;
 }
+
+@media (min-width: 1800px) {
+
+  .custom-1580-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+  }
+
+  .custom-1580-colsspan-2 {
+    grid-column: span 2 !important;
+  }
+
+  .custom-1580-colsspan-10 {
+    grid-column: span 10 !important;
+  }
+
+}

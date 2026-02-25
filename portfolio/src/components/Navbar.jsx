@@ -11,7 +11,7 @@ function Navbar() {
         <header className="w-full px-5 py-4 flex items-center">
 
 
-            <nav className="w-full px-5 py-4 flex items-center">
+            <nav className="w-full sm:px-5 sm:py-4 flex items-center">
 
                 {/* Desktop Menu */}
                 <div className="hidden lg:flex w-full gap-6 justify-between text-xl items-center">
@@ -62,7 +62,7 @@ function Navbar() {
             <div
                 ref={menuRef}
                 className={`
-                fixed top-0 right-0 h-full w-[250px] bg-white text-black z-[1050]
+                fixed top-0 right-0 h-full w-[250px] bg-white text-black border-5 border-black z-[1050]
                 transition-transform duration-500
                 ${menuOpen ? "translate-x-0" : "translate-x-full"}
             `}
@@ -76,34 +76,40 @@ function Navbar() {
                     <i className="bi bi-x-lg"></i>
                 </button>
 
-                <ul className="flex flex-col gap-3 p-6 mt-12">
+                <ul className="relative flex flex-col gap-3 p-6 mt-12 h-full">
 
-                    <li className="text-black bg-white flex flex-col items-center">
+                    <li className="text-black text-2xl bg-white flex flex-col items-center">
                         <Link to="/" onClick={() => setMenuOpen(false)}>
                             About
                         </Link>
                     </li>
 
-                    <li className="text-black bg-white flex flex-col items-center">
+                    <hr className='border-2 mx-5 lg:mx-10' />
+
+                    <li className="text-black text-2xl bg-white flex flex-col items-center">
                         <Link to="/" onClick={() => setMenuOpen(false)}>
                             Projects
                         </Link>
                     </li>
 
-                    <li className="text-black bg-white  flex flex-col items-center">
+                    <hr className='border-2 mx-5 lg:mx-10' />
+
+                    <li className="text-black text-2xl bg-white flex flex-col items-center">
                         <Link to="/" onClick={() => setMenuOpen(false)}>
                             Certificates
                         </Link>
                     </li>
 
-                    <li className="text-black bg-white flex flex-col items-center">
+                    <hr className='border-2 mx-5 lg:mx-10' />
+
+                    <li className="text-black text-2xl bg-white flex flex-col items-center">
                         <Link to="/" onClick={() => setMenuOpen(false)}>
                             Contact
                         </Link>
                     </li>
 
-                    <li className="text-black bg-white flex flex-col items-center">
-                        <Link to="/" onClick={() => setMenuOpen(false)}>
+                    <li className="absolute bottom-20 left-7 text-black text-2xl bg-white flex flex-col">
+                        <Link to="/" onClick={() => setMenuOpen(false)} className="py-2 px-5 rounded-full bg-black text-white">
                             Download CV
                         </Link>
                     </li>

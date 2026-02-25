@@ -17,9 +17,16 @@ import Navbar from './Navbar';
 
 function Intro() {
   return (
-    <section className="grid grid-cols-8 h-[700px]">
-      <div className="sm:col-span-3 lg:col-span-2 bg-black flex flex-col">
-        <div className='w-full h-3/5 bg-no-repeat sm:bg-cover sm:bg-position-[center_0%] lg:bg-size-[130%] lg:bg-position-[center_40%] 2xl:lg:bg-size-[150%]' style={{ backgroundImage: `url(${ShakinImg})` }}></div>
+  
+    <section className="grid grid-cols-1 sm:grid-cols-8 h-[700px] custom-1580-grid">
+      <div className="relative col-span-1 sm:col-span-3 lg:col-span-2 custom-1580-colsspan-2 bg-black flex flex-col h-[700px] sm:h-auto">
+
+        {/* Mobile Navbar Positioned Over Image */}
+        <div className="absolute top-3 right-1 z-50 sm:hidden">
+          <Navbar />
+        </div>
+
+        <div className='w-full h-3/5 bg-no-repeat bg-cover bg-center bg-position-[center_40%] bg-size-[150%] lg:bg-position-[center_40%] 2xl:lg:bg-size-[150%]' style={{ backgroundImage: `url(${ShakinImg})` }}></div>
         <div className='w-full text-white p-5'>
           <div>
             <p className='text-2xl'>Hello, I am</p>
@@ -96,15 +103,17 @@ function Intro() {
         </div>
       </div>
 
-      <div className="sm:col-span-5 lg:col-span-6 h-full flex flex-col">
-        <Navbar />
+      <div className="col-span-1 sm:col-span-5 lg:col-span-6 custom-1580-colsspan-10 sm:h-full flex flex-col h-[630px] sm:h-auto">
+        <div className="hidden sm:block">
+          <Navbar />
+        </div>
 
         <div className='flex flex-col justify-between flex-1'>
           <div>
-            <h1 className="text-5xl font-bold mt-10 mx-10">
+            <h1 className="text-4xl lg:text-5xl font-bold mt-10 mx-5 lg:mx-10">
               Welcome to My Portfolio,
             </h1>
-            <p className="text-4xl mt-6 mx-10 sm:pb-10 lg:pb-0">
+            <p className="text-3xl lg:text-4xl mt-6 mx-5 lg:mx-10 sm:pb-10 lg:pb-0">
               Explore my projects, skills, and passion
               for building creative digital experiences.
             </p>
@@ -113,19 +122,19 @@ function Intro() {
           <div>
             <ul className='flex flex-col gap-5 mb-5'>
               <li>
-                <Link to="/about" className="w-full flex items-center justify-between text-4xl px-10 text-black">About <span><i className="bi bi-arrow-up-right mx-auto"></i></span></Link>
+                <Link to="/about" className="w-full flex items-center justify-between text-3xl lg:text-4xl px-5 lg:px-10 text-black">About <span><i className="bi bi-arrow-up-right mx-auto"></i></span></Link>
               </li>
-              <hr className='border-2 mx-10'/>
+              <hr className='border-2 mx-5 lg:mx-10' />
               <li>
-                <Link to="/projects" className="w-full flex items-center justify-between text-4xl px-10 text-black">Projects <span><i className="bi bi-arrow-up-right mx-1"></i></span></Link>
+                <Link to="/projects" className="w-full flex items-center justify-between text-3xl lg:text-4xl px-5 lg:px-10 text-black">Projects <span><i className="bi bi-arrow-up-right mx-1"></i></span></Link>
               </li>
-              <hr  className='border-2 mx-10'/>
+              <hr className='border-2 mx-5 lg:mx-10' />
               <li>
-                <Link to="/certificates" className="w-full flex items-center justify-between text-4xl px-10 text-black">Certificates <span><i className="bi bi-arrow-up-right mx-1"></i></span></Link>
+                <Link to="/certificates" className="w-full flex items-center justify-between text-3xl lg:text-4xl px-5 lg:px-10 text-black">Certificates <span><i className="bi bi-arrow-up-right mx-1"></i></span></Link>
               </li>
-              <hr  className='border-2 mx-10'/>
+              <hr className='border-2 mx-5 lg:mx-10' />
               <li>
-                <Link to="/contact" className="w-full flex items-center justify-between text-4xl px-10 text-black">Contact <span><i className="bi bi-arrow-up-right mx-1"></i></span></Link>
+                <Link to="/contact" className="w-full flex items-center justify-between text-3xl lg:text-4xl px-5 lg:px-10 text-black">Contact <span><i className="bi bi-arrow-up-right mx-1"></i></span></Link>
               </li>
             </ul>
           </div>

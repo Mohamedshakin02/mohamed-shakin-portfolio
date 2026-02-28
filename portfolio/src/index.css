@@ -9,6 +9,39 @@ body {
   font-family: 'Outfit', sans-serif;
 }
 
+.bi-list::before {
+  font-weight: 600 !important;
+}
+
+/* Pagination container position (optional but nice) */
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100px;
+  top: 50%;
+}
+
+/* Default pagination bullet */
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background: white !important;
+  opacity: 1 !important;
+  border-radius: 50%;
+}
+
+/* Active pagination bullet */
+.swiper-pagination-bullet-active {
+  background: black !important;
+  border: 2px solid white;
+  transform: scale(1.1);
+}
+
+.swiper-pagination-bullets-dynamic {
+  top: 65% !important;
+}
+
 @media (min-width: 1800px) {
 
   .custom-1580-grid {
@@ -23,4 +56,17 @@ body {
     grid-column: span 10 !important;
   }
 
+}
+
+@media screen and (max-width: 640px) {
+  .swiper-pagination-bullet {
+    background: black !important;
+  }
+
+  /* Active pagination bullet */
+  .swiper-pagination-bullet-active {
+    background: white !important;
+    border: 2px solid black;
+    transform: scale(1.1);
+  }
 }

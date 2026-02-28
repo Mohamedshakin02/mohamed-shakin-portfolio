@@ -1,0 +1,174 @@
+import React, { useState, useEffect, useRef } from 'react'
+import { Pagination, Mousewheel, FreeMode } from "swiper/modules";
+import About from './About'
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+
+function AboutSection() {
+
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    const [showControls, setShowControls] = useState(false);
+
+    const swiperRef = useRef(null);
+
+    const slidePrev = () => swiperRef.current?.slidePrev();
+    const slideNext = () => swiperRef.current?.slideNext();
+
+    const Items = ["Me", "Education", "Skills"];
+
+    /* Resize */
+    useEffect(() => {
+        const handleResize = () => setScreenWidth(window.innerWidth);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    /* Template style control logic */
+    const updateControls = () => {
+
+        const swiper = swiperRef.current;
+        if (!swiper || !swiper.slides) return;
+
+        if (screenWidth >= 640) {
+            setShowControls(swiper.slides.length > swiper.params.slidesPerView);
+        }
+        else {
+
+            const totalWidth = Array.from(swiper.slides).reduce(
+                (sum, slide) =>
+                    sum + slide.offsetWidth + (swiper.params.spaceBetween || 0),
+                0
+            );
+
+            setShowControls(totalWidth > swiper.width);
+        }
+    };
+
+    useEffect(() => {
+        const timeout = setTimeout(updateControls, 100);
+        return () => clearTimeout(timeout);
+    }, [screenWidth]);
+
+    return (
+        <section className="grid grid-cols-1 sm:grid-cols-8 min-h-[700px]">
+
+            <div className="col-span-1 sm:col-span-5 lg:col-span-6 flex flex-col order-2 sm:order-1">
+                <About />
+            </div>
+
+            <div className="col-span-1 sm:col-span-3 lg:col-span-2 bg-none text-black sm:text-white sm:bg-black flex flex-col sm:min-h-[700px] order-1 sm:order-2">
+
+                <div className="flex flex-col h-auto sm:h-full">
+
+                    <div className='bg-black'>
+                        <h1 className="text-white text-4xl m-5 mt-10 lg:m-10">
+                            About
+                        </h1>
+
+                        <div className="flex mx-5 lg:mx-10 mb-5">
+                            <hr className="w-[80%] h-1 bg-white" />
+                            <hr className="w-[10%] h-1 bg-black" />
+                            <hr className="w-[10%] h-1 bg-white" />
+                        </div>
+                    </div>
+
+
+
+
+                    <div className="relative mt-10 sm:mt-5">
+
+
+                        {/* Mobile Horizontal Arrows */}
+                        {showControls && screenWidth < 640 && (
+                            <div className="absolute bottom-12 left-0 w-full px-4 flex justify-between text-white text-2xl z-30">
+
+                                <button onClick={slidePrev}>
+                                    <i className="bi bi-caret-left-fill text-black sm:text-white"></i>
+                                </button>
+
+                                <button onClick={slideNext}>
+                                    <i className="bi bi-caret-right-fill text-black sm:text-white"></i>
+                                </button>
+
+                            </div>
+                        )}
+
+                        {/* Swiper */}
+                        <Swiper
+                            key={screenWidth}
+
+                            direction={screenWidth >= 640 ? "vertical" : "horizontal"}
+
+                            slidesPerView={screenWidth >= 640 ? 5 : "auto"}
+
+                            spaceBetween={screenWidth >= 640 ? 0 : 15}
+
+                            mousewheel={screenWidth >= 640}
+
+                            freeMode={{ enabled: true }}
+
+                            pagination={
+                                screenWidth < 640
+                                    ? {
+                                        clickable: true,
+                                        dynamicBullets: true
+                                    }
+                                    : false
+                            }
+
+                            modules={[Mousewheel, Pagination, FreeMode]}
+
+                            onSwiper={(swiper) => {
+                                swiperRef.current = swiper;
+                                setTimeout(updateControls, 100);
+                            }}
+
+                            className="w-full h-[200px] sm:h-auto relative"
+                        >
+
+                            {Items.map((item, index) => (
+                                <SwiperSlide key={index} className="h-auto! w-auto! mr-0!">
+
+                                    <button
+                                        className={`
+                                        text-3xl
+                                        text-left
+                                        bg-white text-black sm:bg-black sm:text-white
+                                        p-5 lg:pl-10
+                                        whitespace-nowrap
+                                        hover:bg-white
+                                        hover:text-black
+                                        transition
+                                        w-full
+                                        sm:border-l-0
+                                        ${index !== 0 ? "border-l-2" : ""}
+                                    `}
+                                    >
+
+                                        {item}
+
+
+
+                                    </button>
+
+                                    <hr className="border-white hidden sm:block sm:mx-5 lg:mx-10" />
+
+
+
+                                </SwiperSlide>
+                            ))}
+
+                        </Swiper>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+    )
+}
+
+export default AboutSection

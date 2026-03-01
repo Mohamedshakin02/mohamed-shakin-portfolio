@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import Education from './Education';
+import Skills from './Skills';
 
 function AboutSection() {
 
@@ -19,7 +20,7 @@ function AboutSection() {
 
     const [activeIndex, setActiveIndex] = useState(0);
 
-    const Components = [<About />, <Education />];
+    const Components = [<About />, <Education />, <Skills />];
 
     const Items = ["Me", "Education", "Skills"];
 

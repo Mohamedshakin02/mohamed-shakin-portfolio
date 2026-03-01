@@ -13,6 +13,34 @@ body {
   font-weight: 600 !important;
 }
 
+.frame-corner {
+  position: relative;
+}
+
+.frame-corner::before,
+.frame-corner::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+
+/* Top Left Corner */
+.frame-corner::before {
+  top: 0;
+  left: 0;
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+}
+
+/* Bottom Right Corner */
+.frame-corner::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 3px solid black;
+  border-right: 3px solid black;
+}
+
 /* Pagination container position (optional but nice) */
 .swiper-pagination {
   display: flex;
@@ -41,6 +69,7 @@ body {
 .swiper-pagination-bullets-dynamic {
   top: 83% !important;
 }
+
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }

@@ -57,7 +57,7 @@ function AboutSection() {
     }, [screenWidth]);
 
     return (
-        <section className="grid grid-cols-1 sm:grid-cols-8 min-h-[700px] mt-10 sm:mt-0 custom-1580-grid">
+        <section className="grid grid-cols-1 sm:grid-cols-8 sm:min-h-[700px] mt-10 sm:mt-0 custom-1580-grid">
 
             <div 
                 key={activeIndex}
@@ -70,7 +70,7 @@ function AboutSection() {
                 <div className="flex flex-col h-auto sm:h-full">
 
                     <div className='bg-black'>
-                        <h1 className="text-white text-4xl m-5 mt-10 md:mt-10 lg:m-10 ">
+                        <h1 className="text-white text-4xl m-5 mt-10 md:mt-10 lg:m-10 lg:mb-7">
                             About
                         </h1>
 

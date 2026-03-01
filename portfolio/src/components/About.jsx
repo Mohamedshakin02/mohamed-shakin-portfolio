@@ -3,7 +3,7 @@ import React from 'react'
 function About() {
     return (
         <>
-            <section className="m-10 mx-5 lg:mx-10 flex flex-col gap-14">
+            <section className="m-10 mx-5 mt-7 sm:mt-10 lg:mx-10 flex flex-col gap-14">
                 <div>
                     <p className="text-2xl lg:text-3xl font-normal text-justify">
                         I'm Mohamed Shakin, passionate about building creative and practical digital solutions that solve real-world problems.

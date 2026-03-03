@@ -17,7 +17,7 @@ import Navbar from './Navbar';
 
 function Intro() {
   return (
-  
+
     <section className="grid grid-cols-1 sm:grid-cols-8 min-h-[700px] custom-1580-grid">
       <div className="relative col-span-1 sm:col-span-3 lg:col-span-2 custom-1580-colsspan-2 bg-black flex flex-col h-[700px] sm:h-auto">
 
@@ -103,7 +103,7 @@ function Intro() {
         </div>
       </div>
 
-      <div className="col-span-1 sm:col-span-5 lg:col-span-6 custom-1580-colsspan-10 sm:h-full flex flex-col h-[630px] sm:h-auto">
+      <div className="col-span-1 sm:col-span-5 lg:col-span-6 custom-1580-colsspan-10 sm:h-full flex flex-col h-auto">
         <div className="hidden sm:block">
           <Navbar />
         </div>
@@ -120,7 +120,7 @@ function Intro() {
           </div>
 
           <div>
-            <ul className='flex flex-col gap-5 mb-5'>
+            <ul className='hidden sm:flex lg:hidden flex-col gap-5 mb-5'>
               <li>
                 <Link to="/about" className="w-full flex items-center justify-between text-3xl lg:text-4xl px-5 lg:px-10 text-black">About <span><i className="bi bi-arrow-up-right mx-auto"></i></span></Link>
               </li>
@@ -137,6 +137,84 @@ function Intro() {
                 <Link to="/contact" className="w-full flex items-center justify-between text-3xl lg:text-4xl px-5 lg:px-10 text-black">Contact <span><i className="bi bi-arrow-up-right mx-1"></i></span></Link>
               </li>
             </ul>
+          </div>
+
+          <div className="grid grid-cols-1 sm:hidden lg:grid lg:grid-cols-3 gap-8 mt-16 mx-5 lg:mx-10 mb-10">
+
+            {/* ABOUT */}
+            <div className="p-8 frame-corner flex flex-col justify-between">
+
+              <div>
+                <p className="text-sm uppercase tracking-widest text-gray-500 hover:text-gray-300">
+                  About
+                </p>
+
+                <h3 className="text-3xl font-semibold mt-4 ">
+                  Who I Am
+                </h3>
+
+                <p className="mt-4 text-gray-600">
+                  Know more about my background, education, and skills in creative computing.
+                </p>
+              </div>
+
+              <div className='mt-6 '>
+                <Link to="/about" className="font-medium">
+                  Explore →
+                </Link>
+              </div>
+            </div>
+
+
+            {/* PROJECTS */}
+            <div className="p-8 frame-corner flex flex-col justify-between">
+
+              <div>
+                <p className="text-sm uppercase tracking-widest text-gray-500 hover:text-gray-300">
+                  Projects
+                </p>
+
+                <h3 className="text-3xl font-semibold mt-4 ">
+                  My Work
+                </h3>
+
+                <p className="mt-4 text-gray-600">
+                  Explore web, software, and game development projects I have built.
+                </p>
+              </div>
+
+              <div className='mt-6 '>
+                <Link to="/about" className="font-medium">
+                  View Projects →
+                </Link>
+              </div>
+            </div>
+
+
+            {/* CONTACT */}
+            <div className="p-8 frame-corner flex flex-col justify-between">
+
+              <div>
+                <p className="text-sm uppercase tracking-widest text-gray-500 hover:text-gray-300">
+                  Contact
+                </p>
+
+                <h3 className="text-3xl font-semibold mt-4 ">
+                  Let’s Connect
+                </h3>
+
+                <p className="mt-4 text-gray-600">
+                  Interested in collaborating or working together? Get in touch.
+                </p>
+              </div>
+
+              <div className='mt-6 '>
+                <Link to="/about" className="font-medium">
+                  Say Hello →
+                </Link>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

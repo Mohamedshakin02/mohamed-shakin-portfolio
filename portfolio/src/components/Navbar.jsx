@@ -35,8 +35,8 @@ function Navbar() {
                     </NavLink>
 
 
-                    <NavLink className="py-2 px-5 rounded-full bg-black text-white" to="/">
-                        Download CV
+                    <NavLink className="py-3 px-6 rounded-full bg-black text-white" to="/">
+                        Download CV <i class="bi bi-download ml-2"></i> 
                     </NavLink>
                 </div>
 

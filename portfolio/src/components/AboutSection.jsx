@@ -31,7 +31,7 @@ function AboutSection() {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    
+
     const updateControls = () => {
 
         const swiper = swiperRef.current;
@@ -60,9 +60,9 @@ function AboutSection() {
     return (
         <section className="grid grid-cols-1 sm:grid-cols-8 sm:min-h-[700px] mt-10 sm:mt-0 custom-1580-grid">
 
-            <div 
+            <div
                 key={activeIndex}
-                className="col-span-1 sm:col-span-5 lg:col-span-6 custom-1580-colsspan-10 flex flex-col order-2 sm:order-1 animate-fade">
+                className="col-span-1 sm:col-span-5 lg:col-span-6 custom-1580-colsspan-10 flex flex-col order-2 sm:order-1 animate-fade mb-5">
                 {Components[activeIndex]}
             </div>
 
@@ -109,13 +109,21 @@ function AboutSection() {
 
                             direction={screenWidth >= 640 ? "vertical" : "horizontal"}
 
-                            slidesPerView={screenWidth >= 640 ? 5 : "auto"}
+                            slidesPerView={'auto'}
 
                             spaceBetween={screenWidth >= 640 ? 0 : 15}
 
                             mousewheel={screenWidth >= 640}
 
-                            freeMode={{ enabled: true }}
+                            allowTouchMove={screenWidth < 640}
+
+                            centeredSlides={screenWidth < 640}
+
+                            centeredSlidesBounds={screenWidth < 640}
+
+                            freeMode={true}
+
+                            freeModeSticky={true}
 
                             pagination={
                                 screenWidth < 640
@@ -125,6 +133,7 @@ function AboutSection() {
                                     }
                                     : false
                             }
+
 
                             modules={[Mousewheel, Pagination, FreeMode]}
 
@@ -150,12 +159,14 @@ function AboutSection() {
                                         }}
                                         className={`
                                             relative
-                                            text-3xl
+                                            text-2xl sm:text-xl md:text-2xl
                                             text-left
                                             p-5 md:pl-5 lg:pl-10
                                             whitespace-nowrap
                                             transition-all duration-300
                                             w-full
+                                            cursor-pointer
+
                                             ${activeIndex === index
                                                 ? "bg-black text-white sm:bg-white sm:text-black"
                                                 : "bg-white text-black sm:bg-black sm:text-white"
@@ -175,7 +186,9 @@ function AboutSection() {
                                         ></span>
                                     </button>
 
-                                    <hr className="border-white border hidden sm:block sm:mx-5 lg:mx-10" />
+                                    {index !== Items.length - 1 && (
+                                        <hr className="border-white border hidden sm:block sm:mx-5 lg:mx-10" />
+                                    )}
 
 
 

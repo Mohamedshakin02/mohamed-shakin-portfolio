@@ -31,7 +31,7 @@ function About() {
                     </div>
                 </div>
 
-                <div className='flex justify-between'>
+                <div className='flex justify-between mb'>
 
                     <div className="flex flex-col gap-3 w-2/5 lg:w-1/4">
                         <p className="text-lg lg:text-xl text-left">Language:</p>

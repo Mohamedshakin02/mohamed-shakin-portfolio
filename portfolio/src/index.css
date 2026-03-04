@@ -46,7 +46,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 10px;
-  width: 100px;
+  width: 200px !important;
   top: 50%;
 }
 

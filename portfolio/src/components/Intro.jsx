@@ -139,13 +139,13 @@ function Intro() {
             </ul>
           </div>
 
-          <div className="grid grid-cols-1 sm:hidden lg:grid lg:grid-cols-3 gap-8 mt-16 mx-5 lg:mx-10 mb-10">
+          <div className="grid grid-cols-1 sm:hidden lg:grid lg:grid-cols-3 gap-8 mt-16 mx-5 lg:mx-10 mb-5 lg:mb-15">
 
             {/* ABOUT */}
             <div className="p-8 frame-corner flex flex-col justify-between">
 
               <div>
-                <p className="text-sm uppercase tracking-widest text-gray-500 hover:text-gray-300">
+                <p className="text-sm uppercase tracking-widest text-gray-500">
                   About
                 </p>
 
@@ -170,7 +170,7 @@ function Intro() {
             <div className="p-8 frame-corner flex flex-col justify-between">
 
               <div>
-                <p className="text-sm uppercase tracking-widest text-gray-500 hover:text-gray-300">
+                <p className="text-sm uppercase tracking-widest text-gray-500">
                   Projects
                 </p>
 
@@ -195,7 +195,7 @@ function Intro() {
             <div className="p-8 frame-corner flex flex-col justify-between">
 
               <div>
-                <p className="text-sm uppercase tracking-widest text-gray-500 hover:text-gray-300">
+                <p className="text-sm uppercase tracking-widest text-gray-500">
                   Contact
                 </p>
 

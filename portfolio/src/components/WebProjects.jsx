@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -65,7 +65,13 @@ function WebProjects() {
             link: 'https://petrol-calculator-activity.vercel.app/',
         }
 
-    ]);
+    ])
+
+    const swiperRef = useRef(null);
+
+    const slidePrev = () => swiperRef.current?.slidePrev();
+    const slideNext = () => swiperRef.current?.slideNext();
+    ;
 
     return (
         <>
@@ -124,7 +130,7 @@ padding-bottom: 65px;
 
 @media (max-width: 1024px) {
     .all-projects-content .mySwiper{
-    padding-bottom: 50px;
+    padding-bottom: 70px;
     }
 }
 
@@ -133,7 +139,20 @@ padding-bottom: 65px;
 
             <div className="m-10 mx-5 mt-15 sm:mt-12 lg:mx-10 lg:mt-15">
 
-                <div className="all-projects-content">
+                <div className="all-projects-content relative">
+
+                    <div className="absolute -bottom-2 left-0 text-2xl z-30">
+                        <button onClick={slidePrev}>
+                            <i className="bi bi-caret-left-fill text-black cursor-pointer"></i>
+                        </button>
+                    </div>
+
+                    <div className="absolute -bottom-2 right-0 text-2xl z-30">
+                        <button onClick={slideNext}>
+                            <i className="bi bi-caret-right-fill text-black cursor-pointer"></i>
+                        </button>
+                    </div>
+
                     <Swiper
                         slidesPerView={1}
                         spaceBetween={50}
@@ -145,6 +164,9 @@ padding-bottom: 65px;
                             1200: { slidesPerView: 3 },
                         }}
                         modules={[Pagination]}
+
+                        onSwiper={(swiper) => (swiperRef.current = swiper)}
+
                         className="mySwiper"
                     >
                         {projects.map((project, index) => (

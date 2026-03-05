@@ -85,22 +85,24 @@ function AboutSection() {
 
 
 
-                    <div className="relative mt-10 sm:mt-5 mx-5 sm:mx-0">
+                    <div className={`relative mt-10 sm:mt-5 mx-5 sm:mx-0 ${showControls ? "mb-13" : "mb-0"}`}>
 
 
                         {/* Mobile Horizontal Arrows */}
                         {showControls && screenWidth < 640 && (
-                            <div className="absolute bottom-0 left-0 w-full flex justify-between text-white text-2xl z-30">
+                            <>
+                                <div className="absolute bottom-0 left-0 text-2xl z-30 mt-10">
+                                    <button onClick={slidePrev}>
+                                        <i className="bi bi-caret-left-fill text-black cursor-pointer"></i>
+                                    </button>
+                                </div>
 
-                                <button onClick={slidePrev}>
-                                    <i className="bi bi-caret-left-fill text-black sm:text-white"></i>
-                                </button>
-
-                                <button onClick={slideNext}>
-                                    <i className="bi bi-caret-right-fill text-black sm:text-white"></i>
-                                </button>
-
-                            </div>
+                                <div className="absolute bottom-0 right-0 text-2xl z-30">
+                                    <button onClick={slideNext}>
+                                        <i className="bi bi-caret-right-fill text-black cursor-pointer"></i>
+                                    </button>
+                                </div>
+                            </>
                         )}
 
                         {/* Swiper */}
@@ -126,7 +128,7 @@ function AboutSection() {
                             freeModeSticky={true}
 
                             pagination={
-                                screenWidth < 640
+                                screenWidth < 640 && showControls
                                     ? {
                                         clickable: true,
                                         dynamicBullets: true

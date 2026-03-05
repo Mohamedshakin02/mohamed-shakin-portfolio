@@ -84,17 +84,19 @@ function ProjectSection() {
 
             {/* Mobile Horizontal Arrows */}
             {showControls && screenWidth < 640 && (
-              <div className="absolute bottom-0 left-0 w-full flex justify-between text-white text-2xl z-30">
+              <>
+                <div className="absolute bottom-0 left-0 text-2xl z-30">
+                  <button onClick={slidePrev}>
+                    <i className="bi bi-caret-left-fill text-black cursor-pointer"></i>
+                  </button>
+                </div>
 
-                <button onClick={slidePrev}>
-                  <i className="bi bi-caret-left-fill text-black sm:text-white"></i>
-                </button>
-
-                <button onClick={slideNext}>
-                  <i className="bi bi-caret-right-fill text-black sm:text-white"></i>
-                </button>
-
-              </div>
+                <div className="absolute bottom-0 right-0 text-2xl z-30">
+                  <button onClick={slideNext}>
+                    <i className="bi bi-caret-right-fill text-black cursor-pointer"></i>
+                  </button>
+                </div>
+              </>
             )}
 
             {/* Swiper */}
@@ -116,7 +118,7 @@ function ProjectSection() {
               centeredSlidesBounds={screenWidth < 640}
 
               freeMode={true}
-              
+
               freeModeSticky={true}
 
               pagination={

@@ -6,7 +6,7 @@ import GameLogo from '../assets/logos/game-logo.png';
 
 function Skills() {
     return (
-        <section className="m-10 mx-5 mt-10 sm:mt-12 lg:mx-10 grid grid-cols-1 lg:grid-cols-2 gap-14">
+        <section className="m-10 mx-5 mt-0  sm:mt-12 lg:mx-10 grid grid-cols-1 lg:grid-cols-2 gap-14">
             <div className='frame-corner p-7 gap-y-4 h-full'>
                 <div className='cols-span-1 h-full flex flex-col justify-between'>
                     <div className='flex items-center gap-x-4'>

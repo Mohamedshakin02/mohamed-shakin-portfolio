@@ -2,7 +2,7 @@ import React from 'react'
 
 function Education() {
   return (
-    <section className="m-10 mx-5 mt-10 sm:mt-12 lg:mx-10 flex flex-col gap-14">
+    <section className="m-10 mx-5 mt-0  sm:mt-12 lg:mx-10 flex flex-col gap-14">
       <div className='flex flex-col md:flex-row justify-between frame-corner p-5 gap-y-4'>
         <div className='flex flex-col justify-between gap-y-3 w-auto md:w-2/5'>
           <div className='text-xl lg:text-3xl font-medium text-center md:text-left'>

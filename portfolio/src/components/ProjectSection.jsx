@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 import Education from './Education';
 import Skills from './Skills';
 import WebProjects from './WebProjects';
+import SoftwareProjects from './SoftwareProjects';
 
 function ProjectSection() {
 
@@ -21,7 +22,7 @@ function ProjectSection() {
 
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const Components = [<WebProjects />, <Education />, <Skills />];
+  const Components = [<WebProjects />, <SoftwareProjects />, <Skills />];
 
   const Items = ["Web Development", "Software Development", "Mobile Application", "Game Development", "UI/UX Design", "Machine Learning", "Other Projects"];
 

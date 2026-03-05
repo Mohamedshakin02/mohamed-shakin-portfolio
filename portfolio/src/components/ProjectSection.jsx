@@ -9,6 +9,7 @@ import Education from './Education';
 import Skills from './Skills';
 import WebProjects from './WebProjects';
 import SoftwareProjects from './SoftwareProjects';
+import AppProjects from './AppProjects';
 
 function ProjectSection() {
 
@@ -22,7 +23,7 @@ function ProjectSection() {
 
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const Components = [<WebProjects />, <SoftwareProjects />, <Skills />];
+  const Components = [<WebProjects />, <SoftwareProjects />, <AppProjects />];
 
   const Items = ["Web Development", "Software Development", "Mobile Application", "Game Development", "UI/UX Design", "Machine Learning", "Other Projects"];
 
@@ -119,8 +120,6 @@ function ProjectSection() {
               centeredSlidesBounds={screenWidth < 640}
 
               freeMode={true}
-
-              freeModeSticky={true}
 
               pagination={
                 screenWidth < 640

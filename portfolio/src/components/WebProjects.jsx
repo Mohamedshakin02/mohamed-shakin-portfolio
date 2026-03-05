@@ -141,32 +141,34 @@ padding-bottom: 65px;
 
                 <div className="all-projects-content relative">
 
-                    <div className="absolute -bottom-2 left-0 text-2xl z-30">
-                        <button onClick={slidePrev}>
-                            <i className="bi bi-caret-left-fill text-black cursor-pointer"></i>
-                        </button>
-                    </div>
+                    {projects.length > 3 && (
+                        <>
+                            <div className="absolute -bottom-2 left-0 text-2xl z-30">
+                                <button onClick={slidePrev}>
+                                    <i className="bi bi-caret-left-fill text-black cursor-pointer"></i>
+                                </button>
+                            </div>
 
-                    <div className="absolute -bottom-2 right-0 text-2xl z-30">
-                        <button onClick={slideNext}>
-                            <i className="bi bi-caret-right-fill text-black cursor-pointer"></i>
-                        </button>
-                    </div>
+                            <div className="absolute -bottom-2 right-0 text-2xl z-30">
+                                <button onClick={slideNext}>
+                                    <i className="bi bi-caret-right-fill text-black cursor-pointer"></i>
+                                </button>
+                            </div>
+                        </>
+                    )}
 
                     <Swiper
                         slidesPerView={1}
                         spaceBetween={50}
-                        loop={true}
-                        pagination={{ clickable: true, dynamicBullets: true, }}
+                        loop={projects.length > 3}
+                        pagination={{ clickable: true, dynamicBullets: true }}
                         breakpoints={{
                             0: { slidesPerView: 1 },
                             1024: { slidesPerView: 2 },
                             1200: { slidesPerView: 3 },
                         }}
                         modules={[Pagination]}
-
                         onSwiper={(swiper) => (swiperRef.current = swiper)}
-
                         className="mySwiper"
                     >
                         {projects.map((project, index) => (

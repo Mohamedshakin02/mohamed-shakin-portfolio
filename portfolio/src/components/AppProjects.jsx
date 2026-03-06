@@ -101,15 +101,15 @@ function AppProjects() {
 
                 <div className="all-projects-content relative">
 
-                    {projects.length > 3 && (
+                    {projects.length > 1 && (
                         <>
-                            <div className="absolute -bottom-2 left-0 text-2xl z-30">
+                            <div className="absolute -bottom-2 left-0 text-2xl z-30 lg:hidden">
                                 <button onClick={slidePrev}>
                                     <i className="bi bi-caret-left-fill text-black cursor-pointer"></i>
                                 </button>
                             </div>
 
-                            <div className="absolute -bottom-2 right-0 text-2xl z-30">
+                            <div className="absolute -bottom-2 right-0 text-2xl z-30 lg:hidden">
                                 <button onClick={slideNext}>
                                     <i className="bi bi-caret-right-fill text-black cursor-pointer"></i>
                                 </button>
@@ -140,7 +140,7 @@ function AppProjects() {
                                         className="mb-4 w-full"
                                     />
                                     <div>
-                                        <h3 className="text-2xl font-semibold h-15">{project.title}</h3>
+                                        <h3 className="text-2xl font-semibold h-15 lg:h-17">{project.title}</h3>
                                     </div>
                                     <p className="mt-5 sm:mt-0 lg:mt-4 text-lg font-normal grow">{project.description}</p>
                                     <div className="flex justify-between items-center mt-7 pt-6 z-30">

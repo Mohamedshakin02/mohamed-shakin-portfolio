@@ -3,37 +3,28 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
-import ProjectImg1 from '../assets/projects/Pixel-Football.png';
-import ProjectImg2 from '../assets/projects/Driving-Test.png';
-import ProjectImg3 from '../assets/projects/Third-Level.png';
-import ProjectImg4 from '../assets/projects/Highway.png';
-import GameLogo from '../assets/logos/game-logo.png';
+import ProjectImg from '../assets/projects/Kaggle.png';
+import WebLogo from '../assets/logos/web-logo.png';
 
-function GameProjects() {
+function MLProjects() {
     const [projects] = useState([
         {
-            title: 'Pixel Football 2D Game',
-            description: "Developed a 2D pixel art football game in Unity with simple controls and fast-paced, engaging gameplay. Designed a side-view match with 2–5 minute durations, focusing on scoring goals and an engaging gameplay experience.",
-            image: ProjectImg1,
-            game: 'https://mohamed-shakin.itch.io/pixel-football',
+            title: 'Vehicle Price Prediction Model',
+            description: 'Developed a machine learning model using Linear Regression to predict vehicle selling prices based on features such as year, mileage, fuel type, transmission, and ownership. The model included data cleaning, outlier removal, feature encoding, and scaling, and achieved an R² score of around 0.72, showing good prediction accuracy.',
+            image: ProjectImg,
+            link: 'https://www.kaggle.com/code/mohamedshakin/01-vehicle-price-prediction',
         },
         {
-            title: 'Driving Test Bitsy Game',
-            description: 'Developed a driving test game in Bitsy with multiple levels, featuring interactive environments with cars, roads, and obstacles, focusing on realistic driving procedures and engaging gameplay.',
-            image: ProjectImg2,
-            game: 'https://mohamed-shakin.itch.io/driving-test',
+            title: 'Tour & Travels Customer Churn Prediction',
+            description: "Developed a machine learning model using Logistic Regression to predict customer churn for a tour and travel company based on features such as age, income class, services opted, frequent flyer status, and social media linkage. The model included class imbalance handling, feature encoding, and scaling, and achieved an accuracy of 87.2%, showing strong predictive performance.",
+            image: ProjectImg,
+            link: 'https://www.kaggle.com/code/mohamedshakin/02-tour-travels-customer-churn-prediction',
         },
         {
-            title: 'The Third Level Story Game',
-            description: "Developed an interactive story game in Twine adapted from The Third Level by Jack Finney, following Charley’s perspective as he tries to escape a world full of fear and worry. Explore if he succeeds or not.",
-            image: ProjectImg3,
-            game: 'https://mohamed-shakin.itch.io/the-third-level',
-        },
-        {
-            title: 'Highway 2D Game',
-            description: 'Developed HIGHWAY, a driving game where players avoid hitting oncoming cars on a highway. Designed the game with cars gradually increasing the speed to make it more challenging and fun.',
-            image: ProjectImg4,
-            game: 'https://editor.p5js.org/m.shakin2005/full/m8bfD2RkI',
+            title: 'AI & Data Science Salary Prediction Model',
+            description: "Developed a machine learning model using Linear Regression to predict AI and Data Science salaries based on experience, skills, tools, country, education, work mode, and company size. The model included data cleaning, currency conversion, feature encoding, scaling, and evaluation, achieving about 90% accuracy. A Gradio interface integrated to allow users to enter details and receive predicted salaries.",
+            image: ProjectImg,
+            link: 'https://www.kaggle.com/code/mohamedshakin/ai-data-science-job-salaries-prediction',
         }
 
     ]);
@@ -112,15 +103,15 @@ function GameProjects() {
 
                 <div className="all-projects-content relative">
 
-                    {projects.length > 3 && (
+                    {projects.length > 2 && (
                         <>
-                            <div className="absolute -bottom-2 left-0 text-2xl z-30">
+                            <div className="absolute -bottom-2 left-0 text-2xl z-30 xl:hidden">
                                 <button onClick={slidePrev}>
                                     <i className="bi bi-caret-left-fill text-black cursor-pointer"></i>
                                 </button>
                             </div>
 
-                            <div className="absolute -bottom-2 right-0 text-2xl z-30">
+                            <div className="absolute -bottom-2 right-0 text-2xl z-30 ">
                                 <button onClick={slideNext}>
                                     <i className="bi bi-caret-right-fill text-black cursor-pointer"></i>
                                 </button>
@@ -136,7 +127,7 @@ function GameProjects() {
                         breakpoints={{
                             0: { slidesPerView: 1 },
                             1024: { slidesPerView: 2 },
-                            1200: { slidesPerView: 3 },
+                            1280: { slidesPerView: 3 },
                         }}
                         modules={[Pagination]}
                         onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -151,20 +142,20 @@ function GameProjects() {
                                         className="mb-4 w-full"
                                     />
                                     <div>
-                                        <h3 className="text-2xl font-semibold h-15 lg:h-17">{project.title}</h3>
+                                        <h3 className="text-2xl font-semibold h-15 lg:h-20">{project.title}</h3>
                                     </div>
                                     <p className="mt-5 sm:mt-0 lg:mt-4 text-lg font-normal grow">{project.description}</p>
                                     <div className="flex justify-between items-center mt-7 pt-6 z-30">
-                                        {project.game && (
+                                        {project.link && (
                                             <a
-                                                href={project.game}
+                                                href={project.link}
                                                 target="_blank"
                                                 rel="noreferrer"
                                                 className="flex items-center gap-1.5 text-lg  text-black"
-                                                title='Game Link'
+                                                title='Live Link'
                                             >
-                                                <img src={GameLogo} alt="Game Link" className='w-6' />
-                                                Game Link
+                                                <img src={WebLogo} alt="Live Link" className='w-6' />
+                                                Live Link
                                             </a>
                                         )}
                                         
@@ -179,4 +170,4 @@ function GameProjects() {
     );
 }
 
-export default GameProjects
+export default MLProjects

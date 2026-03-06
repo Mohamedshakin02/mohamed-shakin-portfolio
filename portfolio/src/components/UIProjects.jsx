@@ -152,7 +152,7 @@ padding-bottom: 65px;
                     className="mb-4 w-full"
                   />
                   <div>
-                    <h3 className="text-2xl font-semibold h-15">{project.title}</h3>
+                    <h3 className="text-2xl font-semibold h-15 lg:h-19">{project.title}</h3>
                   </div>
                   <p className="mt-5 sm:mt-0 lg:mt-4 text-lg font-normal grow">{project.description}</p>
                   <div className="flex justify-between items-center mt-7 pt-6 z-30">

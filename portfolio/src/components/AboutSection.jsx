@@ -115,7 +115,11 @@ function AboutSection() {
 
                             spaceBetween={screenWidth >= 640 ? 0 : 15}
 
-                            mousewheel={screenWidth >= 640}
+                            mousewheel={
+                                screenWidth >= 640
+                                    ? { releaseOnEdges: true }
+                                    : false
+                            }
 
                             allowTouchMove={screenWidth < 640}
 

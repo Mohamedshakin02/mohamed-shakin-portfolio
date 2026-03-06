@@ -1,12 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Pagination, Mousewheel, FreeMode } from "swiper/modules";
-import About from './About'
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import Education from './Education';
-import Skills from './Skills';
 import WebProjects from './WebProjects';
 import SoftwareProjects from './SoftwareProjects';
 import AppProjects from './AppProjects';
@@ -115,7 +112,11 @@ function ProjectSection() {
 
               spaceBetween={screenWidth >= 640 ? 0 : 15}
 
-              mousewheel={screenWidth >= 640}
+              mousewheel={
+                screenWidth >= 640
+                  ? { releaseOnEdges: true }
+                  : false
+              }
 
               allowTouchMove={screenWidth < 640}
 

@@ -22,7 +22,7 @@ function Skills() {
                             <p className='text-xl font-normal'>Building responsive and modern websites with clean layouts and smooth functionality. From simple projects to full-featured sites, delivering engaging and user-friendly web experiences.</p>
                         </div>
                         <div className='h-2/6'>
-                            <p className='m-0 text-lg'>Tools: HTML, CSS, JavaScript, Sass, Bootstrap, React, Node.js, Express.js, MongoDB</p>
+                            <p className='m-0 text-lg'>Tools: HTML, CSS, JavaScript, Sass, Bootstrap, Tailwind, React, Node.js, Express.js, MongoDB</p>
                         </div>
                     </div>
                 </div>

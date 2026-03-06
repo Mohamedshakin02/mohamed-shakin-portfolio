@@ -3,28 +3,30 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
-import ProjectImg from '../assets/projects/Kaggle.png';
+import ProjectImg1 from '../assets/projects/Garden-Chatbot.png';
+import ProjectImg2 from '../assets/projects/Agriculture-Data.png';
+import ProjectImg3 from '../assets/projects/p5js-works.png';
 import WebLogo from '../assets/logos/web-logo.png';
 
-function MLProjects() {
+function OtherProjects() {
     const [projects] = useState([
         {
-            title: 'Vehicle Price Prediction Model',
-            description: 'Developed a machine learning model using Linear Regression to predict vehicle selling prices based on features such as year, mileage, fuel type, transmission, and ownership. The model included data cleaning, outlier removal, feature encoding, and scaling, and achieved an R² score of around 0.72, showing good prediction accuracy.',
-            image: ProjectImg,
-            link: 'https://www.kaggle.com/code/mohamedshakin/01-vehicle-price-prediction',
+            title: 'Garden Chatbot',
+            description: 'Developed Garden Chatbot using Google Dialogflow to provide personalized plant recommendations based on the user’s environment, offering simple and engaging gardening guidance.',
+            image: ProjectImg1,
+            link: 'https://garden-chatbot-project.vercel.app/',
         },
         {
-            title: 'Tour & Travels Customer Churn Prediction',
-            description: "Developed a machine learning model using Logistic Regression to predict customer churn for a tour and travel company based on features such as age, income class, services opted, frequent flyer status, and social media linkage. The model included class imbalance handling, feature encoding, and scaling, and achieved an accuracy of 87.2%, showing strong predictive performance.",
-            image: ProjectImg,
-            link: 'https://www.kaggle.com/code/mohamedshakin/02-tour-travels-customer-churn-prediction',
+            title: 'Agriculture Data Visualization',
+            description: "Agriculture Data Visualization is an interactive project created using Flourish, showing how agriculture has changed over time and across regions, allowing users to explore the data and understand regional and global trends.",
+            image: ProjectImg2,
+            link: 'https://public.flourish.studio/story/3056211/',
         },
         {
-            title: 'AI & Data Science Salary Prediction Model',
-            description: "Developed a machine learning model using Linear Regression to predict AI and Data Science salaries based on experience, skills, tools, country, education, work mode, and company size. The model included data cleaning, currency conversion, feature encoding, scaling, and evaluation, achieving about 90% accuracy. A Gradio interface integrated to allow users to enter details and receive predicted salaries.",
-            image: ProjectImg,
-            link: 'https://www.kaggle.com/code/mohamedshakin/ai-data-science-job-salaries-prediction',
+            title: 'p5.js Works',
+            description: "Developed multiple p5.js projects that featured dynamic digital art with interactive and unique experiences. Explored coding techniques to produce engaging and creative digital artwork.",
+            image: ProjectImg3,
+            link: 'https://editor.p5js.org/m.shakin2005/sketches',
         }
 
     ]);
@@ -40,63 +42,63 @@ function MLProjects() {
 
             <style>
                 {`
-  
-      .all-projects-content .swiper-wrapper { 
+    
+        .all-projects-content .swiper-wrapper { 
+        display: flex;
+        align-items: stretch;
+    }
+    
+        .all-projects-content .swiper-slide { 
+        display: flex; 
+        height: auto; 
+    }
+    
+    
+        .all-projects-content .swiper-pagination-bullets-dynamic {
+      top: unset !important;
+    } 
+    
+    
+    
+    //     .all-projects-content .mySwiper .swiper-pagination {
+    //     top: unset !important;
+    // }
+    
+    
+    .all-projects-content .mySwiper{
+    padding-bottom: 65px;
+    }
+    
+    /* Center pagination */
+    .all-projects-content .mySwiper .swiper-pagination {
+      bottom: 0 !important;
       display: flex;
-      align-items: stretch;
-  }
-  
-      .all-projects-content .swiper-slide { 
-      display: flex; 
-      height: auto; 
-  }
-  
-  
-      .all-projects-content .swiper-pagination-bullets-dynamic {
-    top: unset !important;
-  } 
-  
-  
-  
-  //     .all-projects-content .mySwiper .swiper-pagination {
-  //     top: unset !important;
-  // }
-  
-  
-  .all-projects-content .mySwiper{
-  padding-bottom: 65px;
-  }
-  
-  /* Center pagination */
-  .all-projects-content .mySwiper .swiper-pagination {
-    bottom: 0 !important;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  /* Default bullet */
-  .all-projects-content .mySwiper .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background: black !important;
-    opacity: 1;
-    border-radius: 50%;
-  }
-  
-  /* Active bullet */
-  .all-projects-content .mySwiper .swiper-pagination-bullet-active {
-    background: white !important;
-    border: 2px solid black !important;
-  }
-  
-  @media (max-width: 1024px) {
-      .all-projects-content .mySwiper{
-      padding-bottom: 70px;
-      }
-  }
-  
-  `}
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    /* Default bullet */
+    .all-projects-content .mySwiper .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background: black !important;
+      opacity: 1;
+      border-radius: 50%;
+    }
+    
+    /* Active bullet */
+    .all-projects-content .mySwiper .swiper-pagination-bullet-active {
+      background: white !important;
+      border: 2px solid black !important;
+    }
+    
+    @media (max-width: 1024px) {
+        .all-projects-content .mySwiper{
+        padding-bottom: 70px;
+        }
+    }
+    
+    `}
             </style>
 
             <div className="m-10 mx-5 mt-15 sm:mt-12 lg:mx-10 lg:mt-15">
@@ -142,7 +144,7 @@ function MLProjects() {
                                         className="mb-4 w-full"
                                     />
                                     <div>
-                                        <h3 className="text-2xl font-semibold h-15 lg:h-20">{project.title}</h3>
+                                        <h3 className="text-2xl font-semibold h-15 lg:h-17">{project.title}</h3>
                                     </div>
                                     <p className="mt-5 sm:mt-0 lg:mt-4 text-lg font-normal grow">{project.description}</p>
                                     <div className="flex justify-between items-center mt-7 pt-6 z-30">
@@ -158,7 +160,7 @@ function MLProjects() {
                                                 Live Link
                                             </a>
                                         )}
-                                        
+
                                     </div>
                                 </div>
                             </SwiperSlide>
@@ -168,6 +170,7 @@ function MLProjects() {
             </div>
         </>
     );
+
 }
 
-export default MLProjects
+export default OtherProjects

@@ -13,6 +13,7 @@ import AppProjects from './AppProjects';
 import GameProjects from './GameProjects';
 import UIProjects from './UIProjects';
 import MLProjects from './MLProjects';
+import OtherProjects from './OtherProjects';
 
 function ProjectSection() {
 
@@ -26,7 +27,7 @@ function ProjectSection() {
 
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const Components = [<WebProjects />, <SoftwareProjects />, <AppProjects />, <GameProjects />, <UIProjects />, <MLProjects />];
+  const Components = [<WebProjects />, <SoftwareProjects />, <AppProjects />, <GameProjects />, <UIProjects />, <MLProjects />, <OtherProjects />,];
 
   const Items = ["Web Development", "Software Development", "Mobile Application", "Game Development", "UI/UX Design", "Machine Learning", "Other Projects"];
 

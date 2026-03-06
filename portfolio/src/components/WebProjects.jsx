@@ -165,7 +165,7 @@ padding-bottom: 65px;
                         breakpoints={{
                             0: { slidesPerView: 1 },
                             1024: { slidesPerView: 2 },
-                            1200: { slidesPerView: 3 },
+                            1280: { slidesPerView: 3 },
                         }}
                         modules={[Pagination]}
                         onSwiper={(swiper) => (swiperRef.current = swiper)}

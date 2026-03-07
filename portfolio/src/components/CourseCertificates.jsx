@@ -123,7 +123,7 @@ function CourseCertificates() {
   `}
       </style>
 
-      <div className="m-10 mx-5 mt-0 sm:mt-12 lg:mx-10 lg:mt-15">
+      <div className="m-10 mx-5 mt-0 sm:mt-12 lg:mx-10 lg:mt-15 h-full flex flex-col justify-center">
 
         <div className="all-certificates-content relative">
 
@@ -136,7 +136,7 @@ function CourseCertificates() {
               </div>
 
               <div className="absolute -bottom-3 right-0 text-2xl z-30">
-                <button onClick={slideNext} className='bg-white pl-3'>
+                <button onClick={slideNext} className='bg-white pl-10'>
                   <i className="bi bi-caret-right-fill text-black cursor-pointer"></i>
                 </button>
               </div>

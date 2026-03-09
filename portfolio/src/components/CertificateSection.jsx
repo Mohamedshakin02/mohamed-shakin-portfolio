@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 
 import CourseCertificates from './CourseCertificates';
 import AcademicCertificates from './AcademicCertificates';
+import ProjectCertificates from './ProjectCertificates';
 
 function CertificateSection() {
 
@@ -20,9 +21,9 @@ function CertificateSection() {
 
     const [activeIndex, setActiveIndex] = useState(0);
 
-    const Components = [<CourseCertificates />, <AcademicCertificates />];
+    const Components = [<CourseCertificates />, <AcademicCertificates />, <ProjectCertificates />];
 
-    const Items = ["Course", "Academic"];
+    const Items = ["Course", "Academic", "Project"];
 
     /* Resize */
     useEffect(() => {
@@ -66,7 +67,7 @@ function CertificateSection() {
 
                     <div className='bg-black'>
                         <h1 className="text-white text-4xl m-5 mt-10 md:mt-10 lg:m-10 lg:mb-7">
-                            Cerificates
+                            Certificates
                         </h1>
 
                         <div className="flex mx-5 lg:mx-10 mb-10 sm:mb-5">

@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
+
 // Certificate images
 import CertificateImg1 from '../assets/certificates/HTML.jpg';
 import CertificateImg2 from '../assets/certificates/CSS.jpg';
@@ -123,7 +124,7 @@ function CourseCertificates() {
   `}
       </style>
 
-      <div className="m-10 mx-5 mt-0 sm:mt-12 lg:mx-10 lg:mt-15 h-full flex flex-col justify-center">
+      <div className="m-10 mx-5 mt-15 sm:mt-12 lg:mx-10 lg:mt-15 h-full flex flex-col justify-center">
 
         <div className="all-certificates-content relative">
 

@@ -16,21 +16,21 @@ function Navbar() {
                 {/* Desktop Menu */}
                 <div className="hidden lg:flex w-full gap-6 justify-between text-xl items-center">
 
-                    <NavLink to="/">
+                    <NavLink to="/" className="underline-offset-8 hover:underline transition-all duration-300">
                         About
                     </NavLink>
 
-                    <NavLink to="/">
+                    <NavLink to="/" className="underline-offset-8 hover:underline transition-all duration-300">
                         Projects
                     </NavLink>
 
 
-                    <NavLink to="/">
+                    <NavLink to="/" className="underline-offset-8 hover:underline transition-all duration-300">
                         Certificates
                     </NavLink>
 
 
-                    <NavLink to="/">
+                    <NavLink to="/" className="underline-offset-8 hover:underline transition-all duration-300">
                         Contact
                     </NavLink>
 

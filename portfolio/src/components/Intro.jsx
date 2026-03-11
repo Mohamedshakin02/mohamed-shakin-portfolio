@@ -75,25 +75,25 @@ function Intro() {
 
           <div className='grid grid-cols-4 gap-5 mt-8'>
 
-            <div className='bg-white flex items-center justify-center aspect-square'>
+            <div className='bg-white flex items-center justify-center aspect-square hover:invert transition-all duration-300'>
               <a href="https://github.com/Mohamedshakin02" target="_blank" className='flex justify-center items-center'>
                 <img src={GithubLogo} className='w-3/4 aspect-square' />
               </a>
             </div>
 
-            <div className='bg-white flex items-center justify-center aspect-square'>
+            <div className='bg-white flex items-center justify-center aspect-square hover:invert transition-all duration-300'>
               <a href="https://mohamed-shakin.itch.io/" target="_blank" className='flex justify-center items-center'>
                 <img src={ItchLogo} className='w-3/4 aspect-square' />
               </a>
             </div>
 
-            <div className='bg-white flex items-center justify-center aspect-square'>
+            <div className='bg-white flex items-center justify-center aspect-square hover:invert transition-all duration-300'>
               <a href="https://www.linkedin.com/in/mohamed-shakin/" target="_blank" className='flex justify-center items-center'>
                 <img src={LinkedInLogo} className='w-3/4 aspect-square' />
               </a>
             </div>
 
-            <div className='bg-white flex items-center justify-center aspect-square'>
+            <div className='bg-white flex items-center justify-center aspect-square hover:invert transition-all duration-300'>
               <a href="https://www.youtube.com/@mohamedshakin5397" target="_blank" className='flex justify-center items-center'>
                 <img src={YoutubeLogo} className='w-3/4 aspect-square' />
               </a>
@@ -159,7 +159,7 @@ function Intro() {
               </div>
 
               <div className='mt-6 '>
-                <Link to="/about" className="font-medium">
+                <Link to="/about" className="font-medium underline-offset-8 hover:underline transition-all duration-300">
                   Explore →
                 </Link>
               </div>
@@ -184,7 +184,7 @@ function Intro() {
               </div>
 
               <div className='mt-6 '>
-                <Link to="/about" className="font-medium">
+                <Link to="/about" className="font-medium underline-offset-8 hover:underline transition-all duration-300">
                   View Projects →
                 </Link>
               </div>
@@ -209,7 +209,7 @@ function Intro() {
               </div>
 
               <div className='mt-6 '>
-                <Link to="/about" className="font-medium">
+                <Link to="/about" className="font-medium underline-offset-8 hover:underline transition-all duration-300">
                   Say Hello →
                 </Link>
               </div>

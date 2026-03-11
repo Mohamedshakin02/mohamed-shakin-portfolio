@@ -172,6 +172,7 @@ function AboutSection() {
                                             transition-all duration-300
                                             w-full
                                             cursor-pointer
+                                          sm:hover:bg-white sm:hover:text-black
 
                                             ${activeIndex === index
                                                 ? "bg-black text-white sm:bg-white sm:text-black"

@@ -170,11 +170,20 @@ function CourseCertificates() {
 
             {certificates.map((certificate, index) => (
               <SwiperSlide key={index}>
-                <div className="frame-corner p-4 flex flex-col">
+                <div className="frame-corner p-4 max-h-[500px]
+                                    xl:max-h-[380px]
+
+                                    w-auto
+                                    flex
+                                    items-center
+                                    justify-center">
                   <img
                     src={certificate.image}
                     alt={certificate.title}
-                    className="certificate-img"
+                    className="w-full
+                               h-full
+                               object-contain
+                               transition-all duration-300"
                   />
                 </div>
               </SwiperSlide>

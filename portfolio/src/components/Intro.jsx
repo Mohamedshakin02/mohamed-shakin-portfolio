@@ -101,25 +101,25 @@ function Intro() {
           <div className='grid grid-cols-4 gap-5 mt-8'>
 
             <div className='bg-white flex items-center justify-center aspect-square hover:invert transition-all duration-300'>
-              <a href="https://github.com/Mohamedshakin02" target="_blank" className='flex justify-center items-center'>
+              <a href="https://github.com/Mohamedshakin02" target="_blank" className='flex justify-center items-center' title='Github Link'>
                 <img src={GithubLogo} className='w-3/4 aspect-square' />
               </a>
             </div>
 
             <div className='bg-white flex items-center justify-center aspect-square hover:invert transition-all duration-300'>
-              <a href="https://mohamed-shakin.itch.io/" target="_blank" className='flex justify-center items-center'>
+              <a href="https://mohamed-shakin.itch.io/" target="_blank" className='flex justify-center items-center' title='itch.io Link'>
                 <img src={ItchLogo} className='w-3/4 aspect-square' />
               </a>
             </div>
 
             <div className='bg-white flex items-center justify-center aspect-square hover:invert transition-all duration-300'>
-              <a href="https://www.linkedin.com/in/mohamed-shakin/" target="_blank" className='flex justify-center items-center'>
+              <a href="https://www.linkedin.com/in/mohamed-shakin/" target="_blank" className='flex justify-center items-center' title='LinkedIn Link'>
                 <img src={LinkedInLogo} className='w-3/4 aspect-square' />
               </a>
             </div>
 
             <div className='bg-white flex items-center justify-center aspect-square hover:invert transition-all duration-300'>
-              <a href="https://www.youtube.com/@mohamedshakin5397" target="_blank" className='flex justify-center items-center'>
+              <a href="https://www.youtube.com/@mohamedshakin5397" target="_blank" className='flex justify-center items-center' title='Youtube Link'>
                 <img src={YoutubeLogo} className='w-3/4 aspect-square' />
               </a>
             </div>

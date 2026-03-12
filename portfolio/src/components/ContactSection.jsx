@@ -7,7 +7,7 @@ import YoutubeLogo from '../assets/logos/youtube-logo.png';
 function ContactSection() {
   return (
     <section className="grid grid-cols-1 sm:grid-cols-8 min-h-[700px] custom-1580-grid">
-      <div className="col-span-1 sm:col-span-3 lg:col-span-2 custom-1580-colsspan-2 bg-none text-black sm:text-white sm:bg-black flex flex-col h-auto sm:h-[750px] order-1">
+      <div className="col-span-1 sm:col-span-3 lg:col-span-2 custom-1580-colsspan-2 bg-none text-black sm:text-white sm:bg-black flex flex-col h-auto sm:min-h-[700px] order-1">
 
         <div className="flex flex-col sm:h-full">
 
@@ -75,7 +75,7 @@ function ContactSection() {
                 </div>
                 
                 <div>
-                  <p className='text-3xl lg:text-5xl font-semibold'>Mohamed Shakin</p>
+                  <a href="#" className='text-3xl lg:text-5xl font-semibold'>Mohamed Shakin</a>
                 </div>
                 
               </div>

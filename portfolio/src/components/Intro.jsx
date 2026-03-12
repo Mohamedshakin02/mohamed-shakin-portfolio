@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from "react";
 import ShakinImg from '../assets/Shakin.jpg';
 import GithubLogo from '../assets/logos/github-logo.png';
 import ItchLogo from '../assets/logos/itch-logo.png';
@@ -16,6 +16,31 @@ import { Autoplay } from 'swiper/modules';
 import Navbar from './Navbar';
 
 function Intro() {
+
+  const [activeSection, setActiveSection] = useState("intro");
+  
+      useEffect(() => {
+          const sections = document.querySelectorAll("section");
+  
+          const observer = new IntersectionObserver(
+              (entries) => {
+                  entries.forEach((entry) => {
+                      if (entry.isIntersecting) {
+                          setActiveSection(entry.target.id);
+                      }
+                  });
+              },
+              {
+                  threshold: 0.6
+              }
+          );
+  
+          sections.forEach((section) => observer.observe(section));
+  
+          return () => observer.disconnect();
+      }, []);
+  
+
   return (
 
     <section className="grid grid-cols-1 sm:grid-cols-8 min-h-[700px] custom-1580-grid">
@@ -122,19 +147,19 @@ function Intro() {
           <div>
             <ul className='hidden sm:flex lg:hidden flex-col gap-5 mb-5'>
               <li>
-                <Link to="/about" className="w-full flex items-center justify-between text-3xl lg:text-4xl px-5 lg:px-10 text-black">About <span><i className="bi bi-arrow-up-right mx-auto"></i></span></Link>
+                <a href="#about" className="w-full flex items-center justify-between text-3xl lg:text-4xl px-5 lg:px-10 text-black">About <span><i className="bi bi-arrow-up-right mx-auto"></i></span></a>
               </li>
               <hr className='border-2 mx-5 lg:mx-10' />
               <li>
-                <Link to="/projects" className="w-full flex items-center justify-between text-3xl lg:text-4xl px-5 lg:px-10 text-black">Projects <span><i className="bi bi-arrow-up-right mx-1"></i></span></Link>
+                <a href="#projects" className="w-full flex items-center justify-between text-3xl lg:text-4xl px-5 lg:px-10 text-black">Projects <span><i className="bi bi-arrow-up-right mx-1"></i></span></a>
               </li>
               <hr className='border-2 mx-5 lg:mx-10' />
               <li>
-                <Link to="/certificates" className="w-full flex items-center justify-between text-3xl lg:text-4xl px-5 lg:px-10 text-black">Certificates <span><i className="bi bi-arrow-up-right mx-1"></i></span></Link>
+                <a href="#certificates" className="w-full flex items-center justify-between text-3xl lg:text-4xl px-5 lg:px-10 text-black">Certificates <span><i className="bi bi-arrow-up-right mx-1"></i></span></a>
               </li>
               <hr className='border-2 mx-5 lg:mx-10' />
               <li>
-                <Link to="/contact" className="w-full flex items-center justify-between text-3xl lg:text-4xl px-5 lg:px-10 text-black">Contact <span><i className="bi bi-arrow-up-right mx-1"></i></span></Link>
+                <a href="#contact" className="w-full flex items-center justify-between text-3xl lg:text-4xl px-5 lg:px-10 text-black">Contact <span><i className="bi bi-arrow-up-right mx-1"></i></span></a>
               </li>
             </ul>
           </div>
@@ -159,9 +184,9 @@ function Intro() {
               </div>
 
               <div className='mt-6 '>
-                <Link to="/about" className="font-medium underline-offset-8 hover:underline transition-all duration-300">
+                <a href="#about" className="font-medium underline-offset-8 hover:underline transition-all duration-300">
                   Explore →
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -184,9 +209,9 @@ function Intro() {
               </div>
 
               <div className='mt-6 '>
-                <Link to="/about" className="font-medium underline-offset-8 hover:underline transition-all duration-300">
+                <a href="#projects" className="font-medium underline-offset-8 hover:underline transition-all duration-300">
                   View Projects →
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -209,9 +234,9 @@ function Intro() {
               </div>
 
               <div className='mt-6 '>
-                <Link to="/about" className="font-medium underline-offset-8 hover:underline transition-all duration-300">
+                <a href="#contact" className="font-medium underline-offset-8 hover:underline transition-all duration-300">
                   Say Hello →
-                </Link>
+                </a>
               </div>
             </div>
 

@@ -1,10 +1,33 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
 
     const [menuOpen, setMenuOpen] = useState(false);
     const menuRef = useRef(null);
+
+    const [activeSection, setActiveSection] = useState("intro");
+
+    useEffect(() => {
+        const sections = document.querySelectorAll("section");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(entry.target.id);
+                    }
+                });
+            },
+            {
+                threshold: 0.6
+            }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        return () => observer.disconnect();
+    }, []);
 
 
     return (
@@ -16,27 +39,42 @@ function Navbar() {
                 {/* Desktop Menu */}
                 <div className="hidden lg:flex w-full gap-6 justify-between text-xl items-center">
 
-                    <NavLink to="/" className="underline-offset-8 hover:underline transition-all duration-300">
+                    <a
+                        href="#about"
+                        className={`underline-offset-8 hover:underline transition-all duration-300
+                                    ${activeSection === "about" ? "underline" : ""}`}
+                    >
                         About
-                    </NavLink>
+                    </a>
 
-                    <NavLink to="/" className="underline-offset-8 hover:underline transition-all duration-300">
+                    <a
+                        href="#projects"
+                        className={`underline-offset-8 hover:underline transition-all duration-300
+                                    ${activeSection === "projects" ? "underline" : ""}`}
+                    >
                         Projects
-                    </NavLink>
+                    </a>
 
 
-                    <NavLink to="/" className="underline-offset-8 hover:underline transition-all duration-300">
+                    <a
+                        href="#certificates"
+                        className={`underline-offset-8 hover:underline transition-all duration-300
+                                    ${activeSection === "certificates" ? "underline" : ""}`}
+                    >
                         Certificates
-                    </NavLink>
+                    </a>
 
-
-                    <NavLink to="/" className="underline-offset-8 hover:underline transition-all duration-300">
+                    <a
+                        href="#contact"
+                        className={`underline-offset-8 hover:underline transition-all duration-300
+                                    ${activeSection === "contact" ? "underline" : ""}`}
+                    >
                         Contact
-                    </NavLink>
+                    </a>
 
 
                     <NavLink className="py-3 px-6 rounded-full bg-black text-white" to="/">
-                        Download CV <i className="bi bi-download ml-2"></i> 
+                        Download CV <i className="bi bi-download ml-2"></i>
                     </NavLink>
                 </div>
 
@@ -78,34 +116,50 @@ function Navbar() {
 
                 <ul className="relative flex flex-col gap-3 p-6 mt-12 h-full">
 
-                    <li className="text-black text-2xl bg-white flex flex-col items-center">
-                        <Link to="/" onClick={() => setMenuOpen(false)}>
+                    <li className="text-black text-2xl bg-white flex flex-col items-center" onClick={() => setMenuOpen(false)}>
+                        <a
+                            href="#about" className="w-full text-center"
+
+                        >
                             About
-                        </Link>
+                        </a>
+
                     </li>
 
                     <hr className='border-2 mx-5 lg:mx-10' />
 
-                    <li className="text-black text-2xl bg-white flex flex-col items-center">
-                        <Link to="/" onClick={() => setMenuOpen(false)}>
+                    <li className="text-black text-2xl bg-white flex flex-col items-center" onClick={() => setMenuOpen(false)}>
+                        <a
+                            href="#projects" className="w-full text-center"
+
+                        >
                             Projects
-                        </Link>
+                        </a>
+
                     </li>
 
                     <hr className='border-2 mx-5 lg:mx-10' />
 
-                    <li className="text-black text-2xl bg-white flex flex-col items-center">
-                        <Link to="/" onClick={() => setMenuOpen(false)}>
+                    <li className="text-black text-2xl bg-white flex flex-col items-center" onClick={() => setMenuOpen(false)}>
+                        <a
+                            href="#certificates" className="w-full text-center"
+
+                        >
                             Certificates
-                        </Link>
+                        </a>
+
                     </li>
 
                     <hr className='border-2 mx-5 lg:mx-10' />
 
-                    <li className="text-black text-2xl bg-white flex flex-col items-center">
-                        <Link to="/" onClick={() => setMenuOpen(false)}>
+                    <li className="text-black text-2xl bg-white flex flex-col items-center" onClick={() => setMenuOpen(false)}>
+                        <a
+                            href="#contact" className="w-full text-center"
+
+                        >
                             Contact
-                        </Link>
+                        </a>
+
                     </li>
 
                     <li className="absolute bottom-20 left-7 text-black text-2xl bg-white flex flex-col">

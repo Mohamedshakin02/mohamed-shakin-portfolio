@@ -85,7 +85,7 @@ function ContactSection() {
 
             <div className='flex items-end mt-5 sm:mt-0'>
               
-              <div className='grid grid-cols-4 gap-2 sm:gap-5 w-50 sm:w-38 md:w-45 lg:w-70'>
+              <div className='grid grid-cols-4 gap-2 md:gap-5 w-50 sm:w-38 md:w-45 lg:w-70'>
 
                   <div className='bg-white flex items-center justify-center aspect-square hover:invert transition-all duration-300'>
                     <a href="https://github.com/Mohamedshakin02" target="_blank" className='flex justify-center items-center'>

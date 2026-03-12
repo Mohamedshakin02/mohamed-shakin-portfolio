@@ -8,11 +8,11 @@ import ContactSection from '../components/ContactSection'
 function HomePage() {
   return (
     <main>
-        <Intro/>
-        <AboutSection/>
-        <ProjectSection/>
-        <CertificateSection/>
-        <ContactSection/>
+      <section id="intro"><Intro /></section>
+      <section id="about"><AboutSection /></section>
+      <section id="projects"><ProjectSection /></section>
+      <section id="certificates"><CertificateSection /></section>
+      <section id="contact"><ContactSection /></section>
     </main>
   )
 }

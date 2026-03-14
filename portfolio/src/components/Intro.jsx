@@ -44,14 +44,14 @@ function Intro() {
   return (
 
     <section className="grid grid-cols-1 sm:grid-cols-8 min-h-[700px] custom-1580-grid">
-      <div className="relative col-span-1 sm:col-span-3 lg:col-span-2 custom-1580-colsspan-2 bg-black flex flex-col h-[700px] sm:h-auto">
+      <div className="relative col-span-1 sm:col-span-3 lg:col-span-2 custom-1580-colsspan-2 bg-black flex flex-col h-screen sm:h-[700px] sm:h-auto">
 
         {/* Mobile Navbar Positioned Over Image */}
         <div className="absolute top-3 right-1 z-50 sm:hidden">
           <Navbar />
         </div>
 
-        <div className='w-full h-3/5 bg-no-repeat bg-cover bg-center bg-position-[center_40%] bg-size-[150%] lg:bg-position-[center_40%] 2xl:lg:bg-size-[150%]' style={{ backgroundImage: `url(${ShakinImg})` }}></div>
+        <div className='w-full h-screen sm:h-3/5 bg-no-repeat bg-cover bg-center bg-position-[center_40%] bg-size-[180%] sm:bg-size-[150%] lg:bg-position-[center_40%] 2xl:lg:bg-size-[150%]' style={{ backgroundImage: `url(${ShakinImg})` }}></div>
         <div className='w-full text-white p-5'>
           <div>
             <p className='text-2xl'>Hello, I am</p>

@@ -22,7 +22,7 @@ function CertificateSection() {
 
     const [activeIndex, setActiveIndex] = useState(0);
 
-    const Components = [<CourseCertificates />, <AcademicCertificates />, <ProjectCertificates />, <WorkshopCertificates/>];
+    const Components = [<CourseCertificates />, <AcademicCertificates />, <ProjectCertificates />, <WorkshopCertificates />];
 
     const Items = ["Course", "Academic", "Project", "Workshop"];
 
@@ -103,6 +103,8 @@ function CertificateSection() {
 
                         {/* Swiper */}
                         <Swiper
+                            initialSlide={0}
+
                             key={screenWidth}
 
                             direction={screenWidth >= 640 ? "vertical" : "horizontal"}
@@ -119,9 +121,9 @@ function CertificateSection() {
 
                             allowTouchMove={screenWidth < 640}
 
-                            centeredSlides={screenWidth < 640}
-
-                            centeredSlidesBounds={screenWidth < 640}
+                            centeredSlides={screenWidth >= 640 ? true : false} 
+                            
+                            centeredSlidesBounds={screenWidth >= 640 ? true : false} 
 
                             freeMode={true}
 
@@ -138,6 +140,9 @@ function CertificateSection() {
 
                             onSwiper={(swiper) => {
                                 swiperRef.current = swiper;
+                                swiper.slideTo(0, 0);   // go to first slide instantly
+                                swiper.update();        // update swiper state
+                                setActiveIndex(0);
                                 setTimeout(updateControls, 100);
                             }}
 

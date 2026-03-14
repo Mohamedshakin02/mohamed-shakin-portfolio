@@ -104,6 +104,8 @@ function ProjectSection() {
 
             {/* Swiper */}
             <Swiper
+              initialSlide={0}
+
               key={screenWidth}
 
               direction={screenWidth >= 640 ? "vertical" : "horizontal"}
@@ -139,6 +141,8 @@ function ProjectSection() {
 
               onSwiper={(swiper) => {
                 swiperRef.current = swiper;
+                swiper.slideTo(0);      
+                setActiveIndex(0);
                 setTimeout(updateControls, 100);
               }}
 

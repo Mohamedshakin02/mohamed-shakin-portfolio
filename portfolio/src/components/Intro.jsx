@@ -51,7 +51,7 @@ function Intro() {
           <Navbar />
         </div>
 
-        <div className='w-full h-full sm:h-3/5 bg-no-repeat bg-cover bg-center bg-position-[center_40%] bg-size-[150%] lg:bg-position-[center_40%] 2xl:lg:bg-size-[150%]' style={{ backgroundImage: `url(${ShakinImg})` }}></div>
+        <div className='w-full h-full sm:h-3/5 bg-no-repeat bg-cover bg-center bg-position-[center_55%] sm:bg-position-[center_40%] bg-size-[150%] lg:bg-position-[center_40%] 2xl:lg:bg-size-[150%]' style={{ backgroundImage: `url(${ShakinImg})` }}></div>
         <div className='w-full text-white p-5'>
           <div>
             <p className='text-2xl'>Hello, I am</p>

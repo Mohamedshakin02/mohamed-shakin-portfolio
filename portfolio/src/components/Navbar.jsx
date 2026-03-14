@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
+import CV from "../assets/resume/Mohamed Shakin CV.pdf";
 
 function Navbar() {
 
@@ -73,9 +74,13 @@ function Navbar() {
                     </a>
 
 
-                    <NavLink className="py-3 px-6 rounded-full bg-black text-white" to="/">
+                    <a
+                        href={CV}
+                        download="Mohamed Shakin-CV.pdf"
+                        className="py-3 px-6 rounded-full bg-black text-white"
+                    >
                         Download CV <i className="bi bi-download ml-2"></i>
-                    </NavLink>
+                    </a>
                 </div>
 
                 {/* Right Side Controls */}
@@ -163,9 +168,14 @@ function Navbar() {
                     </li>
 
                     <li className="absolute bottom-20 left-7 text-black text-2xl bg-white flex flex-col">
-                        <Link to="/" onClick={() => setMenuOpen(false)} className="py-2 px-5 rounded-full bg-black text-white">
+                        <a
+                            href={CV}
+                            download="Mohamed_Shakin-CV.pdf"
+                            onClick={() => setMenuOpen(false)}
+                            className="py-2 px-5 rounded-full bg-black text-white"
+                        >
                             Download CV
-                        </Link>
+                        </a>
                     </li>
 
                 </ul>

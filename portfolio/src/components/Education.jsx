@@ -15,7 +15,7 @@ function Education() {
 
         <div className='flex flex-row md:flex-col justify-between items-center md:items-start gap-y-2 w-auto md:w-2/5'>
           <div className='year text-sm md:text-lg lg:text-2xl'>
-            <p>The Central School, Dubai</p>
+            <p>The Central School, Dubai, UAE</p>
           </div>
 
           <div className='text-sm lg:text-base text-right'>
@@ -36,7 +36,7 @@ function Education() {
 
         <div className='flex flex-row md:flex-col justify-between items-center md:items-start gap-y-2 w-auto md:w-2/5'>
           <div className='year text-sm md:text-lg lg:text-2xl'>
-            <p>The Central School, Dubai</p>
+            <p>The Central School, Dubai, UAE</p>
           </div>
 
           <div className='text-sm lg:text-base text-right'>
@@ -57,7 +57,7 @@ function Education() {
 
         <div className='flex flex-row md:flex-col justify-between items-center md:items-start gap-y-2 w-auto md:w-2/5'>
           <div className='year text-sm md:text-lg lg:text-2xl'>
-            <p>Bath Spa Univeristy, RAK</p>
+            <p>Bath Spa University Academic Centre RAK, UAE</p>
           </div>
 
           <div className='text-sm lg:text-base text-right'>

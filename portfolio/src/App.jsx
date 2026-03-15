@@ -9,7 +9,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
 
-        {/* Not Found Route */}
+        {/* Shows the NotFound page for invalid routes */}
+        <Route path="/not-found" element={<NotFound />} />
         <Route path="*" element={<NotFound/>} />
       </Routes>
     </BrowserRouter>

@@ -69,6 +69,7 @@ function CourseCertificates() {
       .all-certificates-content .swiper-slide { 
       display: flex; 
       height: auto; 
+      justify-content: center
   }
   
   

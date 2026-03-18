@@ -102,7 +102,7 @@ function ProjectSection() {
               </>
             )}
 
-            {/* Swiper */}
+            
             <Swiper
               initialSlide={0}
 

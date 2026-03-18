@@ -101,7 +101,7 @@ function CertificateSection() {
                             </>
                         )}
 
-                        {/* Swiper */}
+                        
                         <Swiper
                             initialSlide={0}
 
@@ -140,8 +140,8 @@ function CertificateSection() {
 
                             onSwiper={(swiper) => {
                                 swiperRef.current = swiper;
-                                swiper.slideTo(0, 0);   // go to first slide instantly
-                                swiper.update();        // update swiper state
+                                swiper.slideTo(0, 0);   
+                                swiper.update();        
                                 setActiveIndex(0);
                                 setTimeout(updateControls, 100);
                             }}

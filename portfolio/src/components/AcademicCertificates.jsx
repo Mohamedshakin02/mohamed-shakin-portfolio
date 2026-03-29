@@ -104,7 +104,7 @@ function AcademicCertificates() {
     `}
             </style>
 
-            <div className="m-10 mx-5 mt-15 sm:mt-12 lg:mx-10 lg:mt-15 h-full flex flex-col justify-center">
+            <div className="m-10 mx-5 mt-15 sm:mt-12 lg:mx-10 lg:mt-15 h-full flex flex-col justify-center mb-20 sm:mb-10">
 
                 <div className="all-certificates-content relative">
 

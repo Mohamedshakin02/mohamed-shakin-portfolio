@@ -27,7 +27,7 @@ function OtherProjects() {
         },
         {
             title: 'Arduino Experiment Portfolio',
-            description: "Developed multiple Arduino physical computing experiments using sensors, LEDs, and interactive components. Worked on circuit connections, coding, and hardware integration to create creative and engaging interactive systems.",
+            description: "Developed Arduino physical computing experiments using sensors, LEDs, and interactive components. Worked on circuit connections, coding, and hardware integration to create creative and engaging interactive systems.",
             image: ProjectImg4,
             github: 'https://github.com/Mohamedshakin02/arduino-experiment-portfolio.git',
             youtube: 'https://www.youtube.com/playlist?list=PLRb-GveDzYRqrIj2GRFiNw2d2XcCFN_Ab',

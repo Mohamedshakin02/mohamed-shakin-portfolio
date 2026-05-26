@@ -6,12 +6,14 @@ import { Pagination } from 'swiper/modules';
 
 // Certificate images
 import CertificateImg1 from '../assets/certificates/GDG Certificate.png';
-import CertificateImg2 from '../assets/certificates/Mission Digital Escape.png';
+import CertificateImg2 from '../assets/certificates/Vibe Coding Challenge.png';
+import CertificateImg3 from '../assets/certificates/Mission Digital Escape.png';
 
 function WorkshopCertificates() {
     const [certificates] = useState([
         { title: "Google's Agent Developemnt Kit Workshop Certificate", image: CertificateImg1 },
-        { title: "Mission Digital Escape Workshop Certificate", image: CertificateImg2 },
+        { title: "Vibe Coding Challenge Workshop Certificate", image: CertificateImg2 },
+        { title: "Mission Digital Escape Workshop Certificate", image: CertificateImg3 },
     ]);
 
     const swiperRef = useRef(null);
@@ -90,13 +92,13 @@ function WorkshopCertificates() {
 
                     {certificates.length > 1 && (
                         <>
-                            <div className="absolute -bottom-3 left-0 text-2xl z-30 xl:hidden">
+                            <div className="absolute -bottom-3 left-0 text-2xl z-30">
                                 <button onClick={slidePrev} className='bg-white'>
                                     <i className="bi bi-caret-left-fill text-black cursor-pointer"></i>
                                 </button>
                             </div>
 
-                            <div className="absolute -bottom-3 right-0 text-2xl z-30 xl:hidden">
+                            <div className="absolute -bottom-3 right-0 text-2xl z-30 ">
                                 <button onClick={slideNext} className='bg-white pl-10'>
                                     <i className="bi bi-caret-right-fill text-black cursor-pointer"></i>
                                 </button>
@@ -105,24 +107,30 @@ function WorkshopCertificates() {
                     )}
 
                     <Swiper
-                        slidesPerView={"auto"}
-                        spaceBetween={50}
+                        spaceBetween={40}
+                        loop={certificates.length > 2}
 
-                        pagination={{ clickable: true, dynamicBullets: true }}
+                        slidesPerView={1}
+                        slidesPerGroup={1}
+
+                        pagination={{
+                            clickable: true,
+                            dynamicBullets: true
+                        }}
+
                         breakpoints={{
-                            1024: {
-                                slidesPerView: "auto",
-                                slidesPerGroup: 1,
-                                centeredSlides: false,
-                                loop: certificates.length > 1
+                            0: {
+                                slidesPerView: 1,
+                                centeredSlides: true
                             },
 
-                            1280: {
+                            1024: {
                                 slidesPerView: 2,
-                                slidesPerGroup: 1,
                                 centeredSlides: false
-                            }
+                            },
+
                         }}
+
                         modules={[Pagination]}
                         onSwiper={(swiper) => (swiperRef.current = swiper)}
                         className="mySwiper"

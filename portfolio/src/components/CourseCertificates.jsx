@@ -53,9 +53,9 @@ function CourseCertificates() {
     { title: "Tailwind CSS Certificate", image: CertificateImg18 },
     { title: "Next.js Certificate", image: CertificateImg19 },
     { title: "Introduction to Cybersecurity Certificate", image: CertificateImg20 },
-    { title: "Learning Cyber Incident Response and Digital Forensics", image: CertificateImg21 },
-    { title: "Autopsy for Digital Forensics", image: CertificateImg22 },
-    { title: "Power BI Desktop", image: CertificateImg23 },
+    { title: "Learning Cyber Incident Response and Digital Forensics Certificate", image: CertificateImg21 },
+    { title: "Autopsy for Digital Forensics Certificate", image: CertificateImg22 },
+    { title: "Power BI Desktop Certificate", image: CertificateImg23 },
   ]);
 
   const swiperRef = useRef(null);

@@ -27,6 +27,7 @@ import CertificateImg19 from '../assets/certificates/NextJS.png';
 import CertificateImg20 from '../assets/certificates/Introduction to Cybersecurity.png';
 import CertificateImg21 from '../assets/certificates/Learning Cyber Incident Response and Digital Forensics.png';
 import CertificateImg22 from '../assets/certificates/Autopsy for Digital Forensics.png';
+import CertificateImg23 from '../assets/certificates/Power BI Desktop.png';
 
 
 function CourseCertificates() {
@@ -54,6 +55,7 @@ function CourseCertificates() {
     { title: "Introduction to Cybersecurity Certificate", image: CertificateImg20 },
     { title: "Learning Cyber Incident Response and Digital Forensics", image: CertificateImg21 },
     { title: "Autopsy for Digital Forensics", image: CertificateImg22 },
+    { title: "Power BI Desktop", image: CertificateImg23 },
   ]);
 
   const swiperRef = useRef(null);
